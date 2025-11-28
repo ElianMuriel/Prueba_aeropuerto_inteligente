@@ -7,39 +7,39 @@ class AirportHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Menú Aeropuerto')),
+      appBar: AppBar(
+        title: const Text('Aeropuerto Inteligente'),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const Text(
-              'Seleccione una opción:',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              'Bienvenido al Aeropuerto Inteligente. '
+              'Seleccione una opción para gestionar su vuelo.',
+              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 24),
-
             ElevatedButton(
-              onPressed: () => context.go('/package'),
-              child: const Text('Calculador de Peso Equipage'),
+              onPressed: () => context.go('/package-calculator'),
+              child: const Text('Calculadora de equipaje'),
             ),
-            const SizedBox(height: 12),
-
+            const SizedBox(height: 8),
             ElevatedButton(
-              onPressed: () => context.go('/boarding-dinamiclist'),
-              child: const Text('Lista dinámica de embarque'),
+              onPressed: () => context.go('/schedule'),
+              child: const Text('Plan de vuelos'),
             ),
-            const SizedBox(height: 12),
-
+            const SizedBox(height: 8),
             ElevatedButton(
               onPressed: () => context.go('/boarding-priority'),
               child: const Text('Prioridad de embarque'),
             ),
-            const SizedBox(height: 12),
-
+            const SizedBox(height: 8),
             ElevatedButton(
-              onPressed: () => context.go('/shedule'),
-              child: const Text('Plan de vuelos'),
+              onPressed: () => context.go('/boarding-dynamic-list'),
+              child: const Text('Lista dinámica de tasas de embarque'),
             ),
           ],
         ),
