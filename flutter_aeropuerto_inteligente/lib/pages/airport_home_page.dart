@@ -26,20 +26,20 @@ class AirportHomePage extends StatelessWidget {
             const SizedBox(height: 12),
 
             ElevatedButton(
-              onPressed: () => context.go('/loan'),
-              child: const Text('Simulador de préstamo'),
+              onPressed: () => context.go('/boarding-dinamiclist'),
+              child: const Text('Lista dinámica de embarque'),
             ),
             const SizedBox(height: 12),
 
             ElevatedButton(
-              onPressed: () => context.go('/atm'),
-              child: const Text('Comisión de cajero'),
+              onPressed: () => context.go('/boarding-priority'),
+              child: const Text('Prioridad de embarque'),
             ),
             const SizedBox(height: 12),
 
             ElevatedButton(
-              onPressed: () => context.go('/atm'),
-              child: const Text('Comisión de cajero'),
+              onPressed: () => context.go('/shedule'),
+              child: const Text('Plan de vuelos'),
             ),
           ],
         ),
